@@ -21,6 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "sitebeaume(1)", "..\", "{EF
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "51423"
+		SlnRelativePath = "..\..\sitebeaume\"
 	EndProjectSection
 EndProject
 Global
