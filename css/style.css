@@ -2653,7 +2653,7 @@ ul.dropdown ul ul {
 }
 
 .main-rooms-list .rooms-list-item-wrap {
-	width:385px;
+	width: 44%;
 	margin-left:0px;
 	margin-right:30px;
 	margin-top:10px;
@@ -2681,7 +2681,7 @@ ul.dropdown ul ul {
 }
 
 .main-rooms-list .rooms-list-item-price {
-	right:-4px;
+	right:73px;
 }
 
 .anim-disable{
