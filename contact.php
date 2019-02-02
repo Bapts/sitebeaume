@@ -20,7 +20,7 @@ if (!$comment) $errors[count($errors)] = 'Please enter your comment.';
 if (!$errors) {
 	
 	//recipient
-	$to = '';
+	$to = 'contact@lamaisondebeaume.com';
 	//sender
 	$from = $name . ' <' . $email . '>';
 	
