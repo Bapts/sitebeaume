@@ -6742,7 +6742,7 @@ ul.list.with-divider li {
 	}
 	
 	#top-navigation-menu-wrap {
-		width:155px !important;
+		/*width:155px !important;*/
 		position:relative;
 	}
 	
@@ -6769,7 +6769,7 @@ ul.list.with-divider li {
 	#mobile-navigation-menu {
 		margin-top:22px;
 		margin-right:5px;
-		float:right;
+		float:left;
 		display:block;
 		position:relative;
 	}
@@ -6779,11 +6779,11 @@ ul.list.with-divider li {
 		position:absolute;
 		top:40px;
 		z-index:1000;
-		right:-0px;
+		left:-50px;
 		width:300px;
 		background:#fff;
 		padding:20px;
-		height:310px;
+		height:auto;
 		overflow:auto;
 		box-shadow:0px 0px 2px #999;
 	}
@@ -7356,7 +7356,7 @@ ul.list.with-divider li {
 	}
 	
 	#top-navigation-menu-wrap {
-		width:125px !important;
+		/*width:125px !important;*/
 		position:relative;
 	}
 	
@@ -7384,7 +7384,7 @@ ul.list.with-divider li {
 	#mobile-navigation-menu {
 		margin-top:22px;
 		margin-right:5px;
-		float:right;
+		float:left;
 		display:block;
 		position:relative;
 	}
@@ -7394,11 +7394,11 @@ ul.list.with-divider li {
 		position:absolute;
 		top:40px;
 		z-index:1000;
-		right:-0px;
+		left:-50px;
 		width:200px;
 		background:#fff;
 		padding:20px;
-		height:310px;
+		height:auto;
 		overflow:auto;
 		box-shadow:0px 0px 2px #999;
 	}
