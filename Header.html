@@ -17,12 +17,13 @@
                     <div id="top-language-select">
                         <ul class="dropdown">
                             <li>
-                                <a href="#"><img src="images/gf.png" class="country-flag"> Français <span class="icon-angle-down"></span></a>
+                                <a href="#" id="lang-contry-tag"><img src="images/gf.png" class="country-flag"> Français <span class="icon-angle-down"></span></a>
                                 <ul class="sub_menu">
-                                    <li><a href="#"><img src="images/gb.png" class="country-flag"> English</a></li>
-                                    <li><a href="#"><img src="images/es.png" class="country-flag"> Espanol</a></li>
-                                    <li><a href="#"><img src="images/de.png" class="country-flag"> Deutsch</a></li>
-                                    <li><a href="#"><img src="images/it.png" class="country-flag"> Italiano</a></li>
+                                    <li><a href="index.html?lang=en-US"><img src="images/gb.png" class="country-flag"> English</a></li>
+                                    <li><a href="index.html?lang=es-ES"><img src="images/es.png" class="country-flag"> Espanol</a></li>
+                                    <li><a href="index.html?lang=de-DE"><img src="images/de.png" class="country-flag"> Deutsch</a></li>
+                                    <li><a href="index.html?lang=it-IT"><img src="images/it.png" class="country-flag"> Italiano</a></li>
+                                    <li><a href="index.html?lang=fr-FR"><img src="images/gf.png" class="country-flag"> Français</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -92,3 +93,20 @@
 
 <!-- NATION THEME MAIN SCRIPTS -->
 <script src="js/allscript.js"></script>
+<script>
+    $(document).ready(function () {
+            var userLang = GetURLParameter('lang') || navigator.language || navigator.userLanguage;
+        
+            if (userLang === 'fr-FR')
+                $('#lang-contry-tag').html('<a href="#" id="lang-contry-tag"><img src="images/gf.png" class="country-flag"> Français <span class="icon-angle-down"></span></a>')
+            if (userLang === 'es-ES')
+                $('#lang-contry-tag').html('<a href="#" id="lang-contry-tag"><img src="images/es.png" class="country-flag"> Espanol <span class="icon-angle-down"></span></a>')
+            if (userLang === 'it-IT')
+                $('#lang-contry-tag').html('<a href="#" id="lang-contry-tag"><img src="images/it.png" class="country-flag"> Italiano <span class="icon-angle-down"></span></a>')
+            if (userLang === 'de-DE')
+                $('#lang-contry-tag').html('<a href="#" id="lang-contry-tag"><img src="images/de.png" class="country-flag"> Deutch <span class="icon-angle-down"></span></a>')
+            if (userLang === 'en-US')
+                $('#lang-contry-tag').html('<a href="#" id="lang-contry-tag"><img src="images/gb.png" class="country-flag"> English <span class="icon-angle-down"></span></a>')
+        });
+</script>
+
