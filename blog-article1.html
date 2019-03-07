@@ -168,112 +168,7 @@
             <!-- BLOG CONTENT -->
             <!-- BEGIN BLOG SIDEBAR -->
             <div class="four columns offset-by-one blog-sidebar">
-
-                <!-- SIDEBAR SEARCH -->
-                <input type="text" value="Search ..." id="sidebar-search">
-
-                <!-- BEGIN SIDEBAR CATEGORIES -->
-                <div class="sidebar-header">Categories</div>
-                <ul id="blog-categories">
-                    <li><span class="icon-angle-right"></span>Events</li>
-                    <li><span class="icon-angle-right"></span>News</li>
-                    <li><span class="icon-angle-right"></span>Hollidays</li>
-                    <li><span class="icon-angle-right"></span>Discounts</li>
-                    <li><span class="icon-angle-right"></span>Videos</li>
-                    <li><span class="icon-angle-right"></span>Uncategorized</li>
-                </ul>
-                <!-- END SIDEBAR CATEGORIES -->
-                <!-- BEGIN SIDEBAR POPULAR POSTS -->
-                <div class="sidebar-header">Popular Posts</div>
-                <div id="popular-posts-wrap">
-                    <div class="popular-post-wrap">
-                        <img src="images/50x50.jpg" class="popular-post-image">
-                        <div class="popular-post-content-wrap">
-                            <div class="popular-post-header">Lorem Ipsum Sit Doler</div>
-                            <div class="popular-post-meta">Oct 20, 2013 by Thomas Rode</div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                    <div class="popular-post-wrap">
-                        <img src="images/50x50.jpg" class="popular-post-image">
-                        <div class="popular-post-content-wrap">
-                            <div class="popular-post-header">Cum sociis natoque penatibus</div>
-                            <div class="popular-post-meta">Jul, 2013 by Admin</div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                    <div class="popular-post-wrap">
-                        <img src="images/50x50.jpg" class="popular-post-image">
-                        <div class="popular-post-content-wrap">
-                            <div class="popular-post-header">estibulum tempus diam </div>
-                            <div class="popular-post-meta">Dec, 2013 by Mark Johnson</div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
-                <!-- END SIDEBAR POPULAR POSTS -->
-                <!-- BEGIN SIDEBAR ARCHIVES -->
-                <div class="sidebar-header">Archives</div>
-                <ul id="blog-categories">
-                    <li><span class="icon-angle-right"></span>September 2013</li>
-                    <li><span class="icon-angle-right"></span>August 2013</li>
-                    <li><span class="icon-angle-right"></span>July 2013</li>
-                    <li><span class="icon-angle-right"></span>June 2013</li>
-                </ul>
-                <!-- END SIDEBAR ARCHIVES -->
-                <!-- BEGIN SIDEBAR RECENT COMMENTS -->
-                <div class="sidebar-header">Recent Comments</div>
-                <div id="popular-posts-wrap">
-                    <div class="popular-post-wrap">
-                        <img src="images/50x50.jpg" class="recent-comment-image">
-                        <div class="popular-post-content-wrap">
-                            <div class="popular-post-header">"That's great offer I definetely comming!"</div>
-                            <div class="popular-post-meta">by Thomas Rode</div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                    <div class="popular-post-wrap">
-                        <img src="images/50x50.jpg" class="recent-comment-image">
-                        <div class="popular-post-content-wrap">
-                            <div class="popular-post-header">"It's awesome thank you!"</div>
-                            <div class="popular-post-meta">by John Doe</div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                    <div class="popular-post-wrap">
-                        <img src="images/50x50.jpg" class="recent-comment-image">
-                        <div class="popular-post-content-wrap">
-                            <div class="popular-post-header">"Pellentesque et commodo turpis elit nec..." </div>
-                            <div class="popular-post-meta">by Bob Johnson</div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </div>
-                </div>
-                <!-- END SIDEBAR RECENT COMMENTS -->
-                <!-- BEGIN SIDEBAR CONTACT INFO -->
-                <div class="sidebar-header">Contact Info</div>
-                <div id="contact-us-wrap">
-                    <div id="contact-us-wrap-intro">Have some questions or have problems with online reservations? You may easily contact us through contacts below.</div>
-                    <ul>
-                        <li id="by-phone">
-                            <span class="icon-mobile-phone"></span>
-                            <div class="contact-info-content"><div class="contact-info-method-name">telephone:</div> <br />+1 015 344 343 31</div>
-                            <div style="clear:both"></div>
-                        </li>
-                        <li id="by-email">
-                            <span class="icon-envelope-alt"></span>
-                            <div class="contact-info-content"><div class="contact-info-method-name">email:</div> <br />nationhotel@example.com</div>
-                            <div style="clear:both"></div>
-                        </li>
-                        <li id="by-skype">
-                            <span class="icon-skype"></span>
-                            <div class="contact-info-content"><div class="contact-info-method-name">skype:</div> <br />hotelnationskype</div>
-                            <div style="clear:both"></div>
-                        </li>
-                    </ul>
-                </div>
-                <!-- END SIDEBAR CONTACT INFO -->
-
+                <div id="sidebarPage"></div>       
             </div>
             <!-- END BLOG SIDEBAR -->
 
@@ -304,6 +199,7 @@
     <script>
         $("#headerPage").load("Header.html");
         $("#footerPage").load("Footer.html");
+        $("#sidebarPage").load("blog-sidebar.html");
     </script>
 
 </body>
