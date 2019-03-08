@@ -1,0 +1,16 @@
+﻿{
+  "/index.html": {
+    "{{arrivals}}": "Arrivées à partir de 15:30",
+    "{{departures}}": "Départs avant 11:00",
+    "{{vacancy-ticket}}": "Nous acceptons les chèques vacances",
+    "{{parking-rules}}": "Places de parking sur la propriété\nEspace vélos dans le garage fermé",
+    "{{breakfast-rules}}": "Petit-déjeuner servi dans le jardin ou la grande\nsalle selon le temps, entre 8:00 et 10:30\nSi vous partez tôt, prévenez-nous à \n l'avance pour que nous trouvions une solution !",
+    "{{diner-rules}}": "Dîner servi à la table des hôtes à 19h30.\nMerci de réserver au moins 24h à l'avance.",
+    "{{free-wifi}}": "Wifi gratuit dans toute la maison",
+    "{{under-construction}}": "En construction",
+    "{{golden-book}}": "Livre d'Or"
+  },
+  "/blog.html": {
+
+  }
+}

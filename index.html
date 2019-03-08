@@ -59,7 +59,7 @@
                                  data-easing="easeOutExpo">
                                 <img src="images/construction.png" height="250">
                             </div>
-                            <div class="caption large_text lfr fadeout"
+                            <div class="caption large_text lfr fadeout text"
                                  data-x="1055"
                                  data-y="235"
                                  data-speed="1000"
@@ -279,11 +279,11 @@
         <div id="reservation-text-wrap">
             <div class="container">
                 <div id="main-reservation-text">
-                    Appelez-nous au <span>+33 6 99 81 66 77</span> ou réservez directement en ligne 
+                    Appelez-nous au <span>+33 6 99 81 66 77</span> ou réservez directement en ligne
                     <div id="main-reservation-undertext">N'hésitez pas à nous contacter pour toute demande particulière : réservation de repas, de plusieurs chambres à la fois... Taxe de séjour en sus : 0,80€</div>
                     <div id="main-reservation-undertext">
                         <b>Offre spéciale SOIRÉE ÉTAPE :</b> Pour répondre aux besoins des commerciaux et VRP, nous
-                        proposons une formule diner + nuitée à prix doux (95€) du lundi soir au jeudi soir. 
+                        proposons une formule diner + nuitée à prix doux (95€) du lundi soir au jeudi soir.
                     </div>
                 </div>
 
@@ -378,7 +378,6 @@
                         </div>
 
                         <div style="clear:both"></div>
-
                             <div id="second-par-wrap">
                                 <div class="four columns left-aboutus-column">
                                     Après de nombreux travaux, depuis plusieurs decennies, nous, Marie-Laurence et Frédéric, avons eu le projet
@@ -386,7 +385,8 @@
                                 </div>
                                 <div class="four columns right-aboutus-column"><img src="images/fredo-mlo.JPG" height="167" style="float:right" title="La famille Neyron"></div>
                                 <div style="clear:both"></div>
-                            </div>
+
+                        
 
                         <div style="clear:both"></div>
 
@@ -411,18 +411,20 @@
                         </span>
                     </div>
                     <ul id="general-info">
-                        <li><span class="icon-time"></span>Arrivées à partir de 15:30</li>
-                        <li><span class="icon-time"></span>Départs avant 11:00</li>
-                        <li><span class="icon-globe"></span>Wifi gratuit dans toute la maison</li>
-                        <li><span class="icon-food"></span> Dîner servi à la table des hôtes à 19h30.<br /> Merci de réserver au moins 24h à l'avance.</li>
-                        <li><span class="icon-food"></span> Petit-déjeuner servi dans le jardin ou la grande<br /> salle selon le temps, entre 8:00 et 10:30<br />Si vous partez tôt, prévenez-nous à <br /> l'avance pour que nous trouvions une solution !</li>
-                        <li><span class="icon-truck"></span>Places de parking sur la propriété<br />Espace vélos dans le garage fermé</li>
-                        <li><span class="icon-picture"></span>Nous acceptons les chèques vacances</li>
+                        <li><span class="icon-time text"></span><p class="text">{{arrivals}}</p></li>
+                        <li><span class="icon-time"></span><p class="text">{{departures}}</p></li>
+                        <li><span class="icon-globe"></span><p class="text">{{free-wifi}}</p></li>
+                        <li><span class="icon-food"></span><p class="text">{{diner-rules}}</p></li>
+                        <li><span class="icon-food"></span><p class="text">{{breakfast-rules}}</p></li>
+                        <li><span class="icon-truck"></span><p class="text">{{parking-rules}}</p></li>
+                        <li><span class="icon-picture"></span><p class="text">{{vacancy-ticket}}</p></li>
                     </ul>
                     <div class="header-wrap">
-                        <span class="header-text">
-                            <span class="icon-angle-left"></span> Livre d'or <span class="icon-angle-right"></span>
-                        </span>
+                        <p class="text">
+                            <span class="header-text">
+                                <span class="icon-angle-left"></span>{{golden-book}}<span class="icon-angle-right"></span>
+                            </span>
+                        </p>
                     </div>
                     <div class="testimonials-content-wrap">
                         <div class="testimonials-content"><span class="icon-quote-right"></span>En construction </div>
@@ -464,6 +466,12 @@
     <script>
                             $("#headerPage").load("Header.html");
                             $("#footerPage").load("Footer.html");
+
+                            $(document).ready(function () {
+                                var userLang = GetURLParameter('lang') || navigator.language || navigator.userLanguage;
+
+                                updateLanguage(userLang);
+                            });
     </script>
 
 </body>
