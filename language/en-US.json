@@ -1,0 +1,16 @@
+﻿{
+  "/index.html": {
+    "{{arrivals}}": "Arrivals after 3:30pm",
+    "{{departures}}": "Departure before 11am",
+    "{{vacancy-ticket}}": "We accept French \"chèques vacances\"",
+    "{{parking-rules}}": "You can park your car on the estate\nBikes can be parked in the locked garage",
+    "{{breakfast-rules}}": "Breakfast will be served in the garden or the living\nroom depending on weather, from 8am to 10:30am\nIf you need to leave earlier than that,\nplease tell us beforehand so we can find a solution",
+    "{{diner-rules}}": "Dinner will be served at our table at 7:30pm.\nPlease book with us at least 24 hours in advance",
+    "{{free-wifi}}": "Free Wi-Fi in all rooms and living spaces",
+    "{{under-construction}}": "Website in progress",
+    "{{golden-book}}": "Reviews"
+  },
+  "/blog.html": {
+
+  }
+}
