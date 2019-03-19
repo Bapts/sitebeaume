@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>NATION Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,700' rel='stylesheet' type='text/css'>
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+		<h3 class="center alt">&ldquo;NATION&rdquo; Documentation by &ldquo;raybreaker&rdquo;</h3>
+		<hr>
+		<h1 class="center">&ldquo;NATION&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 23/08/2012<br>
+					By: raybreaker<br>
+					Email: <a href="mailto:raybreakr@gmail.com">raybreakr@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/raybreaker">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#slider">Setting Up Main Slider</a></li>
+			<li><a href="#gmaps">How to Set Up Google Maps</a></li>
+			<li><a href="#twitter">How to Set Up Twitter Feed</a></li>
+			<li><a href="#contactform">How to Set Up Contact Form</a></li>
+			<li><a href="#bookingcalendar">How to Setting Up Booking Calendar</a></li>
+			<li><a href="#stylechange">How to Change Theme Style on Predefined One</a></li>
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#api">API Usage</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		<hr>
+		
+		<h2 id="slider"><strong>A) Setting Up Main Slider</strong> - <a href="#toc">top</a></h2>
+		
+		<p>This chapter will gives you general instructions on how to setting up slider. Later chapters will explain individual slider options in more detail.</p>
+	
+		<p>&lt;ul&gt; element inside &lt;div class="bannercontainer"&gt; will correspond to our slider and each individual &lt;li&gt; element inside it to one slide.</p>
+		<p>You can see example of code to initialize slider with one slide below:</p>
+			
+		<pre class="prettyprint lang-html linenums">
+&lt;div class="bannercontainer"&gt;
+  &lt;div class="banner"&gt;
+    &lt;ul&gt;
+       
+      &lt;li data-transition=&quot;boxslide&quot; data-slotamount=&quot;7&quot; data-link=&quot;http://www.google.de&quot;&gt;
+      
+	  &lt;-- Main slide image --&gt;
+	  &lt;img src=&quot;images/slides/image1.jpg&quot;&gt;
+	  
+	  &lt;-- Slide captions goes here --&gt;
+          &lt;div class=&quot;caption sft big_white&quot;  data-x=&quot;400&quot; data-y=&quot;100&quot; data-speed=&quot;700&quot; 
+          data-start=&quot;1700&quot; data-easing=&quot;easeOutBack&quot;&gt;KICKSTART YOUR WEBSITE&lt;/div&gt;
+          &lt;div class=&quot;caption sfb big_orange&quot;  data-x=&quot;400&quot; data-y=&quot;142&quot; data-speed=&quot;500&quot; 
+          data-start=&quot;1900&quot; data-easing=&quot;easeOutBack&quot;&gt;WITH SLIDER REVOLUTION!&lt;/div&gt;
+     
+      &lt;/li&gt;
+	  
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+		<br />
+		<h4>Slide Options</h4>
+		<div><strong>&lt;li&gt;</strong> - Every list item represents a new Slide. To Define Transitions, main links, etc. use the following <strong>data-</strong> values per list item.</div>
+		<div>&nbsp;</div>
+		<h5>Transition Effects</h5>
+
+		<div><strong>data-transition </strong><br><br>The appearance transition of this slide. You can define more than one, so in each loop the next slide transition type will be shown.<br>
+		<div><br><strong>Basic Transitions:&nbsp;</strong></div>
+		<div>&nbsp;</div>
+		<div>boxslide,boxfade</div>
+		<div>slotzoom-horizontal, slotzoom-vertical</div>
+		<div>slotslide-horizontal, slotslide-vertical</div>
+		<div>slotfade-horizontal, slotfade-vertical</div>
+		<div>curtain-1, curtain-2, curtain-3</div>
+		<div>slideleft, slideright, slideup ,slidedown&nbsp;</div>
+		<div>slidehorizontal, slidevertical</div>
+		<div>fade</div>
+		<div>random</div>
+		<div>&nbsp;</div>
+		<div><strong>Premium Transitions:</strong></div>
+		<div>&nbsp;</div>
+		<div>papercut</div>
+		<div>flyin</div>
+		<div>turnoff</div>
+		<div>cube</div>
+		<div>3dcurtain-vertical</div>
+		<div>3dcurtain-horizontal</div>
+		<div>premium-random<br>&nbsp;</div></div>
+
+		<div><strong>data-slotamount</strong>&nbsp;<br><br>The number of slots or boxes the slide is divided into. If you use boxfade, over 7 slots can be juggy.<br>&nbsp;</div>
+		<div><strong>data-masterspeed</strong><br><br>The speed of the transition in &quot;ms&quot;. &nbsp;default value is 300 (0.3 sec)<br>&nbsp;</div>
+		<div><strong>data-delay</strong>&nbsp;<br><br>A new Dealy value for the Slide. If no delay defined per slide, the dealy defined via Options will be used<br>&nbsp;</div>
+
+
+		<h5>Links (Full Slide Links)</h5>
+		<div><strong>data-link</strong><br><br>A link on the whole slide pic<br>&nbsp;</div>
+		<div><strong>data-target</strong><br><br>The target of the Link for the whole slide pic. (i.e. &quot;_blank&quot;, &quot;_self&quot;)<br>&nbsp;</div>
+		<div><strong>data-slideindex</strong><br><br>Possible values: &nbsp;next,back, 1-x (where x is the max. Amount of slide) If this value is set, click on slide will call the next / previous, or &nbsp;n th Slide.<br>&nbsp;</div>
+
+		<h5>Thumbnail</h5>
+		<div><strong>data-thumb</strong><br><br>An Alternative Source for thumbs. If not defined a copy of the background image will be used in resized form.</div>
+		<br /><br />
+		
+		<h3>The Main Image</h3>
+		<p>Each Slide (&lt;li&gt; &lt;/li&gt;)&nbsp;<strong>MUST&nbsp;</strong>include a main image which is added as a simple &lt;img&gt; tag at the first level. It can be a Simpe image, a colored or transparent image, or dummy image as lazy load version.</p>
+		
+		
+		<h5>Simple Image</h5>
+		<pre class="prettyprint lang-html linenums">
+&lt;img src=&quot;images/slides/slide13.jpg&quot; &gt;
+		</pre>
+		
+		<h5>Colored Background Instead of Image</h5>
+		<pre class="prettyprint lang-html linenums">
+&lt;img src=&quot;images/slides/transparent.png&quot; style=&quot;background-color:#56e34a&quot; &gt;
+		</pre>
+
+		<h5>Lazy Loaded Image</h5>
+		<pre class="prettyprint lang-html linenums">
+&lt;img src=&quot;images/slides/dummy.jpg&quot; data-lazyload=&quot;images/slides/slide13.jpg&quot;&gt;
+		</pre>
+		
+		<div>&nbsp;</div>
+	
+	
+
+		<h3>The Captions / Layers</h3>
+		<p>Each &lt;li&gt; (slide) can include unlimited amount of Captions. Caption are simple html markups with iframe, image, heading , paragraph and any other tags. &nbsp;Each Caption must be wrapped via a &lt;div class=&quot;caption&quot;&gt;&lt;/div&gt;.</p>
+		<p>Each Caption has some special classes and some data- attributes, to set animation type, position, speed, easings etc.</p>
+	
+		<h5>Caption Classes</h5>
+		<div><strong>the &quot;caption&quot; class</strong><br><br>It is the Wrapping main Class which is a MUST. &nbsp;Each Caption need to be defined like this, other way the Slider Plugin can not identifikate the Caption container<br>&nbsp;</div>
+		<div><strong>Styleing Captions</strong>&nbsp;(like &quot;big_white&quot;, &quot;big_orange&quot;, &quot;medium_grey&quot; etc...)<br><br>These are Styling classes created in the settings.css &nbsp;You can add unlimited amount of Styles in your own css file, to style your captions at the top level already<br>&nbsp;</div>
+		
+		<strong>Animation Classes</strong><br><br>Animation Classes defined the start / end animations on Captions. &nbsp;<br><br><em>Incoming Animation Classes:</em><br>
+		<div><br><strong>sft</strong>&nbsp;- Short from Top</div>
+		<div><strong>sfb</strong>&nbsp;- Short from Bottom</div>
+		<div><strong>sfr</strong>&nbsp;- Short from Right</div>
+		<div><strong>sfl</strong>&nbsp;- Short from Left</div>
+		<div><strong>lft</strong>&nbsp;- Long from Top</div>
+		<div><strong>lfb</strong>&nbsp;- Long from Bottom</div>
+		<div><strong>lfr</strong>&nbsp;- Long from Right</div>
+		<div><strong>lfl</strong>&nbsp;- Long from Left</div>
+		<div><strong>fade</strong>&nbsp;- fading</div>
+		<div><strong>randomrotate</strong>- Fade in, Rotate from a Random position and Degree<br><br>
+			<em>Outgoing Animation Classes:</em><br><br>
+			<div><strong>stt</strong>&nbsp;- Short to Top</div>
+			<div><strong>stb</strong>&nbsp;- Short to Bottom</div>
+			<div><strong>str</strong>&nbsp;- Short to Right</div>
+			<div><strong>stl</strong>&nbsp;- Short to Left</div>
+			<div><strong>ltt</strong>&nbsp;- Long to Top</div>
+			<div><strong>ltb</strong>&nbsp;- Long to Bottom</div>
+			<div><strong>ltr</strong>&nbsp;- Long to Right</div>
+			<div><strong>ltl</strong>&nbsp;- Long to Left</div>
+			<div><strong>fadeout</strong>&nbsp;- fading</div>
+			<div><strong>randomrotateout</strong>- Fade in, Rotate from a Random position and Degree</div>
+			<div>&nbsp;</div>
+			<div>&nbsp;</div>
+		</div>
+		
+		<h5>Caption data- settings</h5>
+		<div><strong>data-x</strong><br><br>Possible Values are &quot;left&quot;, &quot;center&quot;, &quot;right&quot;, or any Value between -2500 &nbsp;and 2500.<br>If left/center/right is set, the caption will be siple aligned to the position. &nbsp;Any other &quot;number&quot; will simple set the left position in px of tha caption.&nbsp;<br><br>At &quot;left&quot; the left side of the caption is aligned to the left side of the slider.<br>At &quot;center&quot; the center of caption is aligned to the center of slide. &nbsp;<br>At &quot;right&quot; the caption right side is aligned to the right side of the Slider.<br><br>&nbsp;</div>
+		<div><strong>data-y</strong><br><br>Possible Values are &quot;top&quot;, &quot;center&quot;, &quot;bottom&quot;, or any Value between -2500 &nbsp;and 2500.&nbsp;<br>If top/center/bottom is set, the caption will be siple aligned to the position. &nbsp;Any other &quot;number&quot; will simple set the top position in px of tha caption.<br><br>At &quot;top&quot; the top side of the caption is aligned to the top side of the slider.<br>At &quot;center&quot; the center of caption is aligned to the center of slide. &nbsp;<br>	At &quot;bottom&quot; the caption bottom side is aligned to the bottom side of the Slider.</div>
+	
+		<p>&nbsp;</p>
+		<div><strong>data-hoffset</strong><br><br>Only works if data-x set to left/center/right. It will move the Caption with the defined &quot;px&quot; from the aligned position. &nbsp;i.e. &nbsp;data-x=&quot;center&quot; data-hoffset=&quot;-100&quot; will put the caption 100px left from the slide center &nbsp;horizontaly. &nbsp;<br>&nbsp;</div>
+		<div><strong>data-voffset</strong><br><br>Only works if data-y set to top/center/bottom. It will move the Caption with the defined &quot;px&quot; from the aligned position. &nbsp;i.e. &nbsp;data-x=&quot;center&quot; data-hoffset=&quot;-100&quot; will put the caption 100px left from the slide center &nbsp;vertically. &nbsp;<br>&nbsp;</div>
+		<div><strong>data-speed</strong><br><br>The speed in milliseconds of the transition to move the Caption in the Slide at the defined &nbsp;timepoint.<br>&nbsp;</div>
+		<div><strong>data-start</strong><br><br>The timepoint in millisecond when/at the Caption should move in to the slide.<br>&nbsp;</div>
+		<div><strong>data-easing</strong><br><br>The Easing Art how the caption is moved in to the slide (<strong>note!</strong>&nbsp;Animation art set via Classes !).<br>Possible Values are:<br>
+			<div>easeOutBack, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic</div>
+			<div>easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint</div>
+			<div>easeOutQuint, easeInOutQuint, easeInSine, easeOutSine, easeInOutSine</div>
+			<div>easeInExpo, easeOutExpo, easeInOutExpo, easeInCirc, easeOutCirc, easeInOutCirc</div>
+			<div>easeInElastic, easeOutElastic, easeInOutElastic, easeInBack, easeOutBack, easeInOutBack</div>
+			<div>easeInBounce, easeOutBounce, easeInOutBounce<br>&nbsp;</div>
+		</div>
+		<div><strong>data-endspeed</strong><br><br>The speed in milliseconds of the transition to move the Caption out from the Slide at the defined &nbsp;timepoint.<br>&nbsp;</div>
+		<div><strong>data-end</strong><br><br>The timepoint in millisecond when/at the Caption should move out from the slide.<br>&nbsp;</div>
+		<div><strong>data-endeasing</strong><br><br>The Easing Art how the caption is moved out from the slide (<strong>note!&nbsp;</strong>Animation art set via Classes !).&nbsp;<br>Possible Values are:<br>
+			<div>easeOutBack, easeInQuad, easeOutQuad, easeInOutQuad, easeInCubic, easeOutCubic</div>
+			<div>easeInOutCubic, easeInQuart, easeOutQuart, easeInOutQuart, easeInQuint</div>
+			<div>easeOutQuint, easeInOutQuint, easeInSine, easeOutSine, easeInOutSine</div>
+			<div>easeInExpo, easeOutExpo, easeInOutExpo, easeInCirc, easeOutCirc, easeInOutCirc</div>
+			<div>easeInElastic, easeOutElastic, easeInOutElastic, easeInBack, easeOutBack, easeInOutBack</div>
+			<div>easeInBounce, easeOutBounce, easeInOutBounce</div>
+		
+		<h5>&nbsp;</h5>
+		<h5>Special Classes within the Caption container</h5>
+		<div><strong>tp-scrollbelowslider</strong><br><br>If this class added to an element within the caption container, it will scroll the Body Position to under the current slider (used in Fullscreen slider only)<br>&nbsp;</div>
+		<div><strong>tp-resizeme</strong><br><br>Add class tp-resizeme to the container inside the caption and every item within (included the same container) will be responsive resized. Only needed if more than one depth exist in the container !<br>&nbsp;</div>
+		<div><strong>frontcorner, backcorner, frontcornertop, backcornertop</strong><br><br>This classes added without any content in a closed div i.e.&nbsp;&lt;div class=&quot;frontcorner&quot;&gt;&lt;/div&gt; within the container. &nbsp;It will cut the left/right side of the caption background in 45&deg; 1:1&nbsp;<br>&nbsp;</div>
+		<p>&nbsp;</p>
+		</div>
+	
+
+		
+
+		<h3>Media in Slide</h3>
+		<p>The slider can play Vimeo, YouTube and HTML5 (videoJs) Videos, in boxed and &quot;FullSlide&quot; size. Via the Embeded API&#39;s the Slider will be paused, and restarted from the VideoPlayers. &nbsp;To use the Video Files in Slider see the following instructions.</p>
+		<p>Each Video file has the same <strong>data- </strong>options like:</p>
+		<div><strong>autoplay</strong><br><br>Possible Values: &quot;true&quot; / &quot;false&quot; - will play the Video Directly when slider has been loaded&nbsp;<br>&nbsp;</div>
+		<div><strong>nextslideatend</strong><br><br>Possible Values: &quot;true&quot; / &quot;false&quot; after video come to the end position, it swaps to the next slide automatically.<br>&nbsp;</div>
+
+		<p>&nbsp;</p>
+		
+		<h3>YouTube Video in Slide</h3>
+
+		<p>Boxed version</p>	
+		<p>YouTube VIdeo will be added within a caption due an iframe. The Following example shows an iFrame embeded YouTube Video in a caption (460px X 259px), i.e.:</p>
+		
+		<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;caption fade &quot;
+   data-autoplay=&quot;true&quot;
+   data-nextslideatend=&quot;false&quot;
+   data-x=&quot;130&quot;
+   data-y=&quot;70&quot;
+   data-speed=&quot;500&quot;
+   data-start=&quot;10&quot;
+   data-easing=&quot;easeOutBack&quot;&gt;
+&lt;iframe src=&quot;http://www.youtube.com/embed/YHWkro9-e9Q?hd=1&wmode=opaque&controls=1&showinfo=0&quot; 
+width=&quot;460&quot; height=&quot;259&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</pre>
+		<div><br>FullWidth Version (/i.e.)</div>
+
+		<div><pre class="prettyprint lang-html linenums">
+ &lt;div class=&quot;caption fade <strong>fullscreenvideo</strong>&quot;
+     data-autoplay=&quot;true&quot;
+     data-nextslideatend=&quot;true&quot;
+     data-x=&quot;0&quot;
+     data-y=&quot;0&quot;
+     data-speed=&quot;500&quot;
+     data-start=&quot;10&quot;
+     data-easing=&quot;easeOutBack&quot;&gt;
+&lt;iframe src=&quot;http://www.youtube.com/embed/YHWkro9-e9Q?hd=1&wmode=opaque&controls=1&showinfo=0&quot; 
+width=&quot;100%&quot; height=&quot;100%&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</pre>
+		<div>&nbsp;</div>
+		</div>
+		<div>&nbsp;</div>
+
+		<h3>Vimeo Video</h3>
+
+		<div>&nbsp;</div>
+		<div>Vimeo Video API works only Online. It will not work well on Localhost due some Sandbox Security reason. Please always test it Online.</div>
+		<div>&nbsp;</div>
+		<div>Boxed Version</div>
+		<div>&nbsp;</div>
+		<div><pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;caption fade &quot;
+    data-autoplay=&quot;true&quot;
+    data-nextslideatend=&quot;false&quot;
+    data-x=&quot;190&quot;
+    data-y=&quot;110&quot;
+    data-speed=&quot;500&quot;
+    data-start=&quot;10&quot;
+    data-easing=&quot;easeOutBack&quot;&gt;
+&lt;iframe src=&quot;http://player.vimeo.com/video/29298709?title=0&byline=0&portrait=0;api=1&quot; 
+width=&quot;460&quot; height=&quot;259&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</pre>
+		<div>&nbsp;</div>
+		</div>
+		<div>&nbsp;</div>
+		<div>FullWidth Version (i.e.)</div>
+		<div><pre class="prettyprint lang-html linenums">
+ &lt;div class=&quot;caption fade <strong>fullscreenvideo</strong>&quot;
+    data-autoplay=&quot;true&quot;
+    data-nextslideatend=&quot;true&quot;
+    data-x=&quot;0&quot;
+    data-y=&quot;0&quot;
+    data-speed=&quot;500&quot;
+    data-start=&quot;10&quot;
+    data-easing=&quot;easeOutBack&quot;&gt;
+&lt;iframe src=&quot;http://player.vimeo.com/video/29298709?title=0&byline=0&portrait=0;api=1&quot; 
+width=&quot;100%&quot; height=&quot;100%&quot;&gt;&lt;/iframe&gt;
+&lt;/div&gt;</pre>
+		<div>&nbsp;</div>
+		</div>
+		
+		<h3>HTML5 Video (videoJS)</h3>
+		<p>The VideoJs Files are only loaded if the html5 video markup exist. Please do not forget to add the videoJsPath in the initialising Options !&nbsp;</p>
+		<p>Boxed Version (i.e.)</p>
+		<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;caption randomrotate &quot;
+   data-x=&quot;20&quot;
+   data-y=&quot;80&quot;
+   data-speed=&quot;300&quot;
+   data-start=&quot;2100&quot;
+   data-easing=&quot;easeOutExpo&quot;
+   data-autoplay=&quot;true&quot;
+   data-nextslideatend=&quot;false&quot;&gt;
+
+&lt;video class=&quot;video-js vjs-default-skin&quot; controls preload=&quot;none&quot; width=&quot;600&quot; height=&quot;240&quot;
+  poster=&quot;http://video-js.zencoder.com/oceans-clip.png&quot; data-setup=&quot;{}&quot;&gt;
+
+   &lt;source src=&quot;http://video-js.zencoder.com/oceans-clip.mp4&quot; type=&#39;video/mp4&#39; /&gt;
+   &lt;source src=&quot;http://video-js.zencoder.com/oceans-clip.webm&quot; type=&#39;video/webm&#39; /&gt;
+   &lt;source src=&quot;http://video-js.zencoder.com/oceans-clip.ogv&quot; type=&#39;video/ogg&#39; /&gt;
+   &lt;track kind=&quot;captions&quot; src=&quot;demo.captions.vtt&quot; srclang=&quot;en&quot; label=&quot;English&quot; /&gt;
+&lt;/video&gt;
+
+&lt;/div&gt;</pre>
+		<div>&nbsp;</div>
+		<div>FullWidth Version (i.e.)</div>
+		<div>&nbsp;</div>
+		<div><pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;caption randomrotate <strong>fullscreenvideo</strong>&quot;
+   data-x=&quot;0&quot;
+   data-y=&quot;0&quot;
+   data-speed=&quot;300&quot;
+   data-start=&quot;2100&quot;
+   data-easing=&quot;easeOutExpo&quot;
+   data-autoplay=&quot;true&quot;
+   data-nextslideatend=&quot;true&quot;&gt;
+
+&lt;video class=&quot;video-js vjs-default-skin&quot; controls preload=&quot;none&quot; width=&quot;100%&quot; height=&quot;100%&quot;
+     poster=&quot;http://video-js.zencoder.com/oceans-clip.png&quot; data-setup=&quot;{}&quot;&gt;
+
+   &lt;source src=&quot;http://video-js.zencoder.com/oceans-clip.mp4&quot; type=&#39;video/mp4&#39; /&gt;
+   &lt;source src=&quot;http://video-js.zencoder.com/oceans-clip.webm&quot; type=&#39;video/webm&#39; /&gt;
+   &lt;source src=&quot;http://video-js.zencoder.com/oceans-clip.ogv&quot; type=&#39;video/ogg&#39; /&gt;
+   &lt;track kind=&quot;captions&quot; src=&quot;demo.captions.vtt&quot; srclang=&quot;en&quot; label=&quot;English&quot; /&gt;
+&lt;/video&gt;
+&lt;/div&gt;</pre>
+		<div>&nbsp;</div>
+		</div>
+		
+		<h3>Banner Timer</h3>
+		<div>In order to use a banner timer, you will need to add the markup within the banner or fullwidthbanner divs.</div>
+		<div><br>The markup should look like :</div>
+		<div>&nbsp;</div>
+
+		<h5>Top Positioned Banner Timer:</h5>
+		<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;tp-bannertimer&quot;&gt;&lt;/div&gt;<span class="Apple-tab-span" style="white-space: pre;"> </span></pre>
+		<div>&nbsp;</div>
+
+	
+		<h5>Bottom Positioned Banner Timer:</h5>
+		<pre class="prettyprint lang-html linenums">
+&lt;div class=&quot;tp-bannertimer tp-bottom&quot;&gt;&lt;/div&gt;</pre>
+		<div>&nbsp;</div>
+		<div>To remove this timer just simple remove the markup from the container, and that is it.</div>
+		<div>&nbsp;</div>
+		<div>&nbsp;</div>
+		<hr>
+		<br><br>
+		
+		<h2 id="gmaps"><strong>B) How to set up Google maps</strong> - <a href="#toc">top</a></h2>
+		<p><b>STEP 1.</b> Obtain Google Maps API keys <a href="https://developers.google.com/maps/documentation/javascript/tutorial#api_key">here</a></p>
+		<p><b>STEP 2.</b> Find following line of code on every page where google maps will be shown and enter API key there:</p>
+		<pre>&lt;script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?
+		key=<b>enter_here_google_maps_api_key</b>&sensor=true"&gt;&lt;/script&gt;</pre>
+		
+		
+		<p><b>STEP 3.</b> Get desired location coordinates: </p>
+		<ol>
+		<li>Open <a href="http://maps.google.com">Google Maps</a> and find desired location</li>
+		<li>Right-click on that place and choose "What's here?" (in new version of Google Maps you have to left click on desired location and coordinates will shows in box below search field)
+		<img src="assets/images/gmaps1.jpg"></p>
+		<li>Copy coordinates in the search box
+		<img src="assets/images/gmaps2.jpg"></li>
+		</ol>
+		
+		<p><b>STEP 4.</b> Open "allscript.js" file in the "js" folder and find the following lines of code there (line 1280 and line 1290 by default): 
+		<pre>
+//Coordinates of the map's center (line 358 for contact, line 393 for main page maps)
+center: new google.maps.LatLng(<b>40.710670, -73.999604</b>)
+
+//Coordinate of the map marker's location (line 371 for contact, line 406 for main page maps)
+position: new google.maps.LatLng(<b>40.710670, -73.999604</b>)
+		</pre>
+		
+		<p><b>STEP 5.</b> Change values in bold on coordinates that you copied in the third step.</li>
+		
+		<hr>
+		<br><br>
+		
+		
+		<h2 id="twitter"><strong>C) How to set up Twitter feed</strong> - <a href="#toc">top</a></h2>
+		<p><b>STEP 1.</b> Go to <a href="http://dev.twitter.com/apps">http://dev.twitter.com/apps</a> and sign up (or sign in with your Login and Password) there;</p>
+		<p><b>STEP 2.</b> Click on "Create a new application" button. The name and description of your application can be anything you like and the website field doesn’t have to be the site where your Twitter feed are located.
+		<p><b>STEP 3.</b> On the next screen, click on "Create my access token" button. You may need to refresh the page after a few seconds if it doesn’t appear automatically.</p>
+		<p><b>STEP 4.</b> Copy value in Consumer key, Consumer secret, Access token, Access token secret fields.</p>
+		<img src="assets/images/twitter_keys.png" width="800" />
+		
+		<p><b>STEP 5.</b> Open <b>get-tweets.php</b> file in your theme folder and insert value that you copy in previous step on line 7, 8, 9 and 10 accordingly. </b> 
+		<p><b>STEP 6.</b> Open <b>allscript.js</b> file in the "js" folder and find following lines of code (line 240 by default):</b> 
+		<pre>
+	$.getJSON('../get-tweets.php',{"twitterusername": "<b>envato</b>", "displaylimit": 3},;
+		</pre>
+		<p><b>STEP 7.</b> Change value in bold on the username whose tweets you want to display.</p>
+		<hr>
+		<br><br>
+		
+		
+		<h2 id="contactform"><strong>D) How to set up Contact and Reservation forms </strong> - <a href="#toc">top</a></h2>
+		<p>To make contact form work you should: </p>
+		<ol>
+		<li>Open <b>contact.php</b> file</li>
+		<li>Find following line of code (line 23): 
+		<br /><i>//recipient<br />
+		$to = '';</i></li>
+		<li>Enter your email adress, for example: 
+		<br /><i>//recipient<br />
+		$to = '<b>raybreakr@gmail.com</b>';</i>
+		</li>
+		</ol>
+		<p>To make online reservation form work you should: </p>
+		<ol>
+		<li>Open <b>reservation.php</b> file</li>
+		<li>Find following line of code (line 29): 
+		<br /><i>//recipient<br />
+		$to = '';</i></li>
+		<li>Enter your email adress, for example: 
+		<br /><i>//recipient<br />
+		$to = '<b>raybreakr@gmail.com</b>';</i>
+		</li>
+		</ol>
+		<hr>
+		<br><br>
+		
+		<h2 id="bookingcalendar">E) How to setting up booking calendar</h2>
+
+		<p>NATION template include booking calendar pro jquery plugin that used to create fully working booking system.</p>
+		<p>Plugin has backend and frontend part. Frontend part is visible for users, you may already see it when visit our demo website for example on <a href="http://raybreaker.ru/nation/reservation.html">this page</a> (click on "availability" tab in description). Also it's used on reservation form page and many other place in template.</p> 
+		<p>Backend part normally shoudn't be accessible by user because it used to change booking info of entire booking system. You may check our backend on <a href="http://raybreaker.ru/nation/backend/test.php">this page</a>.</p>
+		
+		<p>Follow steps bellow to setting up your booking system:</p>
+		
+		<p><b>STEP 1.</b> Create special table for booking calendar in your MySQL database.</p>
+		<p><b>STEP 2.</b> Open <b>opendb.php</b> file in "php" folder and enter your MySQL user, password and database name that you created in first step.</p>
+		<p><b>STEP 3.</b> Determine how much items you'll need to have in your booking system (for example on demo website we have 9 various hotel rooms so we should have 9 various item for that purpose).</p>
+		<p><b>STEP 4.</b> For every items in your booking system you have to create special file in backend folder with name backend1.php for first item, backend2.php for second, backend3.php for third etc. and following content:
+		
+		<pre>
+			//backend1.php content
+			&lt;h2&gt;Item 1 description:&lt;/h2&gt;
+			&lt;br /&gt;
+			&lt;div id="backend"&gt;&lt;/div&gt;
+			
+			//backend2.php content
+			&lt;h2&gt;Item 2 description:&lt;/h2&gt;
+			&lt;br /&gt;
+			&lt;div id="backend2"&gt;&lt;/div&gt;
+			
+			//backend3.php content
+			&lt;h2&gt;Item 3 description:&lt;/h2&gt;
+			&lt;br /&gt;
+			&lt;div id="backend3"&gt;&lt;/div&gt;
+		</pre>
+		
+		
+		
+		<p><b>STEP 5.</b> Frontend used to show info that you enter in corresponding backend for ordinary users. You'll have to use correct number of frontend to match your backend (by default we use 9 so you'll have to adjust it to correct number). We use frontend on following page: 
+		<ul>
+			<li><b>index.html</b> - each element in "Check our rooms" section should have unique frontend</li>
+			<li><b>reservation.html</b> - every items page must have unique frontend name if backend for that item has name backend3 then frontend should have name frontend3 etc.;</li>
+			<li><b>rooms-list.html, rooms-list2.html, rooms-list3.html</b> - every items wrap must have unique corresponding frontend name</li>
+			<li><b>reservation-form.html</b> - after check-in element you have to add correct number of front end in following format:<br />
+			&lt;div id="reservation-frontend" class="form-date-picker-in"&gt;&lt;/div&gt; <br />after check-out element you have to add correct number of frontend in following format:<br />
+			&lt;div id="reservation-frontend" class="form-date-picker-out"&gt;&lt;/div&gt; <br />
+				
+		</ul>
+		
+		<p><b>STEP 6.</b> You'll have to set up admin password so only you can have access to backend. To do this open <b>pass.php</b> file in backend folder and edit username and password there. By default username=admin and password=123.</p>
+		
+		<hr>
+		<br><br>
+		
+		<h2 id="stylechange"><strong>F) How to change theme style on predifined one</strong> - <a href="#toc">top</a></h2>
+		<p>If you visited our demo website you may noted style switcher that can immediately change style of theme. To do the same with your copy of theme you should do following:</p>
+		<ul>
+		<li>Go to 'style' folder (located inside your theme folder)</li>
+		<li>Rename your style.css file to style_default.css (or something like that so you don't mixed it with other file)</li>
+		<li>Choose one of the file that start with "style_" (it's name should be pretty self-explanatory) and rename it to style.css</li>
+		</ul>
+		
+		<p>To set up new background or pattern for body you have to do following:
+		
+		<ul>
+		<li>Move your background or pattern to "image" folder;</li>
+		<li>Open your style.css file;</li>
+		<li>Go to line 2244;</li>
+		<li>Change your_bg_image_here.jpg or your_pattern_here.jpg on your background image or pattern name.</p>
+		<hr>
+		<br><br>
+		
+		
+		<h2 id="htmlStructure"><strong>G) HTML Structure</strong> - <a href="#toc">top</a></h2>
+		<p>This theme is a fixed layout with two and one columns. The general template structure is the same throughout the template but id attributes may change from page to page for example blog page wrap will have class="blog-wrap" but simple page with content will have class="page-wrap" etc. </p>
+		
+		<p>Example of general content structure with <b>two columns</b>. </p>
+		
+		<img src="assets/images/htmlstructure.png" alt="HTML Structure" />
+		
+		<p>Example of general content structure with <b>one columns</b>. </p>
+		
+		<img src="assets/images/htmlstructure2.png" alt="HTML Structure" />
+		
+		<p>If you would like to edit the color, font, or style of any elements in one of these columns, you would do the following:</p>
+
+<pre>	#page-content div {
+		color: #someColor;
+	} 
+</pre>
+
+		<p>If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more weight.</p>
+
+		<p>I.E.</p>
+
+<pre>	.containter #left-content div {
+		color: #someColor;
+	}
+</pre>
+
+		<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.</p> 
+
+		<hr>
+		<br><br>
+		
+		<h2 id="cssFiles"><strong>H) CSS Files and Structure</strong> - <a href="#toc">top</a></h2>
+
+		<p>We using three CSS files in this theme.</p> 
+
+		<p>The <b>style.css</b> file contains all of the specific stylings for pages. The file is separated into the following sections:</p>  
+
+<pre>	/*   Default Style Section (line 1- 406)   */
+
+	some code
+	
+	
+	/*   Base Skeleton Grid Initializing (line 406 - 1086)   */
+	
+	some code
+	
+	
+	/*   Nation Meta Style (line 1086 - 2215)   */
+	
+	some code
+
+	
+	/*   NATION Main Style (line 1086 - 7894)
+
+	1. Header (line 1086 - 2485)
+	2. Front Page (line 2485 - 3412)
+	3. Reservation Pages Style (line 3412 - 4170)
+	4. Blog Pages (line 4170 - 4624)
+	5. Other Pages (line 4624 - 5119)
+	6. Footer (line 5119 - 5442)
+	7. Style for mobile devices (line 5442 - 7893)
+	
+	*/
+
+	some code
+		
+</pre>
+		
+		<p>The <b>settings.css</b> file contain styles for revolution slider that used on front and reservation pages. </p>
+		<p>The <b>booking-calendar-pro.css</b> file contain styles for the booking calendar pro jQuery plugin. </p>
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+		<hr>
+		<br><br>
+		
+		<h2 id="javascript"><strong>I) JavaScript</strong> - <a href="#toc">top</a></h2>
+		
+		<p>This theme imports eight Javascript files.</p>
+		
+		<ol>
+			<li>jquery.js</li>
+			<li>allscript.js</li>
+			<li>jflickrfeed.js</li>
+			<li>jquery.bookingCalendarPRO.js</li>
+			<li>jquery.themepunch.revolution.min.js</li>
+			<li>lightbox.js</li>
+			<li>retina.js</li>
+			<li>smoothScroll.js</li>
+		</ol>
+		  
+		<ol>
+			<li><b>jquery.js</b> is a Javascript library that needed for other plugins and scripts to work;</li>
+			<li>In <b>allscript.js</b> the animation for this template, google maps and various plugin initializing;</li>
+			<li>jflickrfeed.js</li> create flickrfeed (<i>used in footer</i>);</li>
+			<li><b>jquery.bookingCalendarPRO.js</b> create booking system;</li>
+			<li><b>jquery.themepunch.revolution.min.js</b> create slider (<i>used on front and reservation pages</i>);
+			<li><b>lightbox.js</b> create beatifull photo open effect on Gallery pages;</li>
+			<li><b>retina.js</b> automatically replace images on it's highres analog when view on retina ready device; </li> 
+			<li><b>smoothScroll.js</b> plugin that makes pages scrolling smoth in Chrome browser. </li>
+		</ol>
+		
+		<hr>
+		
+		<br><br>
+		
+		<h2 id="api"><strong>J) API</strong> - <a href="#toc">top</a></h2>
+		<p>If you want to change the default behavior one of the plugins that used at this theme you should open <b>allscript.js</b> file and find the line of code where that plugin initialized.</p>
+		
+		<p>You may find full API description of the plugins on following page:</p> 
+		<ul>
+			<li><a target="_blank" href="slider-revolution-doc/documentation.html">Revolution Slider API</a></li>
+			<li><a target="_blank" href="booking-calendar-pro/documentation.html">Booking Calendar Pro API</a></li>
+			<li><a target="_blank" href="https://developers.google.com/maps/documentation/javascript/tutorial">Google Maps plugin API</a></li>
+			<li><a target="_blank" href="http://leandrovieira.com/projects/jquery/lightbox/#how-to-use">LightBox plugin API</a> (click on "How to Use." tabs)</li>
+			<li><a target="_blank" href="http://files.gethifi.com/posts/jflickrfeed/example.html">jFlickrFeed plugin API</a></li>
+		</ul>
+		<hr>
+		<br /><br />
+	
+
+	<h2 id="credits"><strong>K) Sources and Credits</strong> - <a href="#toc">top</a></h2>
+		
+		<p>I've used the following images and icons:</p>
+		
+		<ul>
+			<li><a target="_blank" href="http://fontawesome.io/">Font Awesome</a></li>	
+			<li><a target="_blank" href="http://subtlepatterns.com">Subtle Pattern</a></li>
+		</ul>
+		
+		<p>Following images used in preview but not comes with theme (however they can be purchased separately on Photo Dune): </p>
+		
+		<ul>
+			<li><a target="_blank" href="http://photodune.net/item/happy-talk/5561311?ref=raybreaker">Happy talk by ollyi</a></li>
+			<li><a target="_blank" href="http://photodune.net/item/interior-of-modern-comfortable-hotel-room/4076325?ref=raybreaker">Interior of modern comfortable hotel room by jannoon028</a></li>
+			<li><a target="_blank" href="http://photodune.net/item/smiles/2359510?ref=raybreaker">Smiles by ollyi</a></li>
+			<li><a target="_blank" href="http://photodune.net/item/hotel-room/3973259?ref=raybreaker">Hotel room by korkut82</a></li>
+			<li><a target="_blank" href="http://photodune.net/item/luxury-hotel-room/3499605?ref=raybreaker">Luxury hotel room by ollyi</a></li>
+			<li><a target="_blank" href="http://photodune.net/item/hotel-room/1183263?ref=raybreaker">Hotel room by krsmanovic</a></li>
+			<li><a target="_blank" href="http://photodune.net/item/luxurious-hotel-room/770348?ref=raybreaker">Luxurious Hotel Room by haveseen</a></li>
+			<li><a target="_blank" href="http://photodune.net/item/swimming-pool-with-stair-and-green-relaxing-water/1634179?ref=raybreaker">Swimming pool with stair and green relaxing water by smaglov</a></li>
+			<li><a target="_blank" href="http://photodune.net/item/cottage-dresser-with-mirror/5668072?ref=raybreaker">Cottage dresser with mirror by elenathewise</a></li>
+		    <li><a target="_blank" href="http://photodune.net/item/bedroom-with-comfortable-bed/199978?ref=raybreaker">Bedroom With Comfortable Bed elenathewise</a></li>
+			<li><a target="_blank" href="http://photodune.net/item/morning-winter-calm-mountain-landscape/1288081?ref=raybreaker">Morning winter calm mountain landscape by pitrs</a></li>
+			<li><a target="_blank" href="http://photodune.net/item/winter-sport/371558?ref=raybreaker">Winter sport by Pressmaster</a></li>
+			<li><a target="_blank" href="http://www.sxc.hu">Hotel room by stock.xchng</a></li>
+		</ul>
+		
+		<hr />
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		<p class="append-bottom alt large"><strong>raybreaker</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

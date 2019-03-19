@@ -98,7 +98,7 @@ else {
 					<div class="three columns" id="top-logo-wrap">
 					
 						<!-- MAIN LOGO -->
-						<a href="../index.html"><img src="../images/main-logo.png" alt="Nation Hotel logo" id="main-logo" /><img src="images/main-logo-small.png" alt="Nation Hotel logo" id="main-logo-min" /></a>
+						<a href="../index-EN.html"><img src="../images/main-logo.png" alt="Nation Hotel logo" id="main-logo" /><img src="images/main-logo-small.png" alt="Nation Hotel logo" id="main-logo-min" /></a>
 					
 					</div>
 					
@@ -108,7 +108,7 @@ else {
 						<ul id="mobile-navigation-menu">	
 							<li><span class="icon-reorder"></span>
 								<ul id="mobile-navigation-menu-list">
-									<li><a href="../index.html">Home</a></li>
+									<li><a href="../index-EN.html">Home</a></li>
 									<li><a href="../rooms-list.html">Reservation</a></li>
 									<li><a href="../rooms-list.html">-Rooms 3 Columns</a></li>
 									<li><a href="../rooms-list2.html">-Rooms 2 Columns</a></li>
@@ -145,7 +145,7 @@ else {
 						
 						<!-- BEGIN MAIN NAVIGATION -->
 						<ul id="top-navigation-menu" class="dropdown">
-							<li><a href="../index.html"><div class="top-navigation-content-wrap">Home <span class="under-title">site homepage</span></div></a></li>
+							<li><a href="../index-EN.html"><div class="top-navigation-content-wrap">Home <span class="under-title">site homepage</span></div></a></li>
 							<li><a href="../rooms-list.html"><div class="top-navigation-content-wrap">Reservation <span class="icon-angle-down"></span><span class="under-title">book your room online</span></div></a>
 								<ul class="sub_menu">
 									<li class="submenu-arrow-wrap"><div class="top-submenu-arrow"></div></li>

@@ -125,8 +125,8 @@
         <div id="room-view-wrap" class="main-rooms-list">
             <div class="container">
 
-                <div id="main-news-header">Nos chambres</div>
-                <div id="main-news-subheader">Survolez les photos et cliquez sur la loupe pour plus d'informations, et sur le calendrier pour réserver !</div>
+                <div id="main-news-header"><p class="text">{{our-rooms}}</p></div>
+                <div id="main-news-subheader"><p class="text">{{our-rooms-description}}</p></div>
 
                 <div id="room-view-content">
 
@@ -148,11 +148,11 @@
                             </div>
                         </div>
                         <div class="rooms-list-content-wrap module-bottom">
-                            <a href="reservation.html?Chambre=chambre-puligny"><div class="rooms-list-header">Chambre Puligny-Montrachet</div></a>
+                            <a href="reservation.html?Chambre=chambre-puligny"><div class="rooms-list-header"><p class="text">{{puligny-name}}</p></div></a>
                             <div class="underheader-line"></div>
                             <div class="room-list-parametr">
-                                <div id="room-person">Capacité : <span class="icon-male"></span><span class="icon-male"></span><span class="icon-male"></span><span class="icon-male"></span></div>
-                                <div id="room-bed">1 lit king size, 2 lits simples</div>
+                                <div id="room-person"><p class="text">{{capacity-title}}</p><span class="icon-male"></span><span class="icon-male"></span><span class="icon-male"></span><span class="icon-male"></span></div>
+                                <div id="room-bed"><p class="text">{{beds-for-four}}</p></div>
                             </div>
                         </div>
                         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -183,11 +183,11 @@
                             </div>
                         </div>
                         <div class="rooms-list-content-wrap module-bottom">
-                            <a href="reservation.html?Chambre=chambre-morey"><div class="rooms-list-header">Chambre Morey-Saint-Denis</div></a>
+                            <a href="reservation.html?Chambre=chambre-morey"><div class="rooms-list-header"><p class="text">{{morey-name}}</p></div></a>
                             <div class="underheader-line"></div>
                             <div class="room-list-parametr">
-                                <div id="room-person">Capacité : <span class="icon-male"></span><span class="icon-male"></span></div>
-                                <div id="room-bed">1 lit king size</div>
+                                <div id="room-person"><p class="text">{{capacity-title}}</p><span class="icon-male"></span><span class="icon-male"></span></div>
+                                <div id="room-bed"><p class="text">{{1-king}}</p></div>
                             </div>
                         </div>
                         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -218,11 +218,11 @@
                             </div>
                         </div>
                         <div class="rooms-list-content-wrap module-bottom">
-                            <a href="reservation.html?Chambre=chambre-clos"><div class="rooms-list-header">Chambre Le Clos Vougeot</div></a>
+                            <a href="reservation.html?Chambre=chambre-clos"><div class="rooms-list-header"><p class="text">{{vougeot-name}}</p></div></a>
                             <div class="underheader-line"></div>
                             <div class="room-list-parametr">
-                                <div id="room-person">Capacité : <span class="icon-male"></span><span class="icon-male"></span></div>
-                                <div id="room-bed">1 lit king size ou 2 lits simples sur demande</div>
+                                <div id="room-person"><p class="text">{{capacity-title}}</p><span class="icon-male"></span><span class="icon-male"></span></div>
+                                <div id="room-bed"><p class="text">{{1-king-2-singles}}</p></div>
                             </div>
                         </div>
                         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -253,11 +253,11 @@
                             </div>
                         </div>
                         <div class="rooms-list-content-wrap module-bottom">
-                            <a href="reservation.html?Chambre=chambre-gevrey"><div class="rooms-list-header">Chambre Gevrey-Chambertin</div></a>
+                            <a href="reservation.html?Chambre=chambre-gevrey"><div class="rooms-list-header"><p class="text">{{gevrey-name}}</p></div></a>
                             <div class="underheader-line"></div>
                             <div class="room-list-parametr">
-                                <div id="room-person">Capacité : <span class="icon-male"></span><span class="icon-male"></span></div>
-                                <div id="room-bed">1 lit king size ou 2 lits simples</div>
+                                <div id="room-person"><p class="text">{{capacity-title}}</p><span class="icon-male"></span><span class="icon-male"></span></div>
+                                <div id="room-bed"><p class="text">{{1-king-2-singles}}</p></div>
                             </div>
                         </div>
                         <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -278,16 +278,13 @@
         <!-- BEGIN MADE RESERVATION WRAP -->
         <div id="reservation-text-wrap">
             <div class="container">
-                <div id="main-reservation-text">
-                    Appelez-nous au <span>+33 6 99 81 66 77</span> ou réservez directement en ligne
-                    <div id="main-reservation-undertext">N'hésitez pas à nous contacter pour toute demande particulière : réservation de repas, de plusieurs chambres à la fois... Taxe de séjour en sus : 0,80€</div>
-                    <div id="main-reservation-undertext">
-                        <b>Offre spéciale SOIRÉE ÉTAPE :</b> Pour répondre aux besoins des commerciaux et VRP, nous
-                        proposons une formule diner + nuitée à prix doux (95€) du lundi soir au jeudi soir.
+                <div id="main-reservation-text"><p class="text">{{reservation-call-us}}</p>
+                    <div id="main-reservation-undertext"><p class="text">{{reservation-contact-us}}</p></div>
+                    <div id="main-reservation-undertext"><p class="text"><b>{{special-offer-bold}}</b>{{special-offer-normal}}</p>
                     </div>
                 </div>
 
-                <div id="reservation-button">RÉSERVATION<span class="icon-shopping-cart"></span></div>
+                <div id="reservation-button"><p class="text">{{reservation-button}}<span class="icon-shopping-cart"></span></p></div>
             </div>
         </div>
         <!-- END MADE RESERVATION WRAP -->
@@ -299,25 +296,24 @@
                 <div class="six columns module" style="margin-bottom: 25px;">
                     <div class="header-wrap">
                         <span class="header-text">
-                            <span class="icon-angle-left"></span> Événements <span class="icon-angle-right"></span>
+                            <span class="icon-angle-left"></span><p class="text">{{events-title}}</p><span class="icon-angle-right"></span>
                         </span>
                     </div>
                     <div class="event-wrap">
-                        <div class="event-header">Week-end initiation au yoga</div>
+                        <div class="event-header"><p class="text">{{event1-title}}</p></div>
                         <!--<div class="event-date">7 October, 2013</div>-->
                         <div class="event-header-divider"></div>
-                        <div class="event-offer">
-                            Date non définie, n'hésitez pas à nous contacter si vous êtes intéressés ou souhaitez en savoir plus<br />
-                            <a href=""><div class="event-more-button">En savoir plus <span class="icon-eye-open"></span></div></a>
+                        <div class="event-offer"><p class="text">{{event1-description}}</p><br />
+                            <a href=""><div class="event-more-button"><p class="text">{{know-more}}<span class="icon-eye-open"></span></p></div></a>
                         </div>
                     </div>
                     <div class="event-wrap">
-                        <div class="event-header">Week-end dégustation de vins</div>
+                        <div class="event-header"><p class="text">{{event2-title}}</p></div>
                         <!--<div class="event-date">12 December, 2013</div>-->
                         <div class="event-header-divider"></div>
                         <div class="event-offer">
-                            Venez goûter du vin avec des professionnels ! Date non définie, faites-nous signe si vous êtes intéressés.<br />
-                            <a href=""><div class="event-more-button">En savoir plus <span class="icon-eye-open"></span></div></a>
+                            <p class="text">{{event2-description}}</p><br />
+                            <a href=""><div class="event-more-button"><p class="text">{{know-more}}<span class="icon-eye-open"></span></p></div></a>
                         </div>
                     </div>
                 </div>
@@ -326,12 +322,11 @@
                 <div class="nine columns offset-by-one module-side" style="margin-bottom: 25px;">
                     <div class="header-wrap">
                         <span class="header-text">
-                            <span class="icon-angle-left"></span> Où sommes nous ? <span class="icon-angle-right"></span>
+                            <span class="icon-angle-left"></span><p class="text">{{location}}</p><span class="icon-angle-right"></span>
                         </span>
                     </div>
-                    <div id="main-map-text">A moins de 5 minutes de la sortie Pouilly-en-Auxois de l'autoroute A6 (échangeur 28), suivre Créancey au rond-point et prendre la D16 (première à gauche avant Créancey), traverser le village jusqu'à la chapelle Saint-Gervais, entrée 50m après le virage, sur la gauche. </div>
-                    <div id="main-map-text">De Dijon par l'A38, sortie Créancey. Après le panneau Beaume, la Maison de Beaume est la deuxième sur votre droite.  </div>
-
+                    <div id="main-map-text"><p class="text">{{a6}}</p></div>
+                    <div id="main-map-text"><p class="text">{{a38}}</p></div>
                     <div class="nine columns">
                         <div id="map" style='height:250px;'></div>
                         <script>
@@ -357,22 +352,18 @@
                 <div class="eight columns module">
                     <div class="header-wrap">
                         <span class="header-text">
-                            <span class="icon-angle-left"></span> Qui sommes nous ? <span class="icon-angle-right"></span>
+                            <span class="icon-angle-left"></span> <p class="text">{{about-us}}</p><span class="icon-angle-right"></span>
                         </span>
                     </div>
                     <div id="main-aboutus-wrap">
                         <div id="main-aboutus-intro">
-                            Située sur un joli terrain de 3000 m², la Maison de Beaume est une ancienne ferme qui est dans la
-                            famille depuis 1975. Elle apparait déjà sur le cadastre de 1840. Le petit village de Beaume est très fleuri , a beaucoup de charme avec toutes ses maisons en pierre.
-                            Beaume a eu jusqu’à 7 moulins sur sa commune, au detour de ruelles, nous pouvons encore les imaginer
-                            à certains endroits.
+                            <p class="text">{{intro-presentation-index}}</p>
                         </div>
                         <div id="first-par-wrap">
                             <div class="four columns left-aboutus-column"><img src="images/beaume-1975.JPG" height="167" style="float:left" title="La maison en 1975"></div>
-
+                            <p class="text">{{house-presentation-index}}</p>
                             <div class="four columns right-aboutus-column">
-                                La Maison de Beaume est un ancien corps de ferme construit avant 1840.
-                                Il entre dans la famille en 1975.
+
                             </div>
                             <div style="clear:both"></div>
                         </div>
@@ -380,8 +371,7 @@
                         <div style="clear:both"></div>
                             <div id="second-par-wrap">
                                 <div class="four columns left-aboutus-column">
-                                    Après de nombreux travaux, depuis plusieurs decennies, nous, Marie-Laurence et Frédéric, avons eu le projet
-                                    d’ouvrir 4 chambres d’hotes en 2018. Un projet d'autant plus important pour nous que nous avons fêté notre mariage dans la maison !
+                                    <p class="text">{{travaux-presentation-index}}</p>
                                 </div>
                                 <div class="four columns right-aboutus-column"><img src="images/fredo-mlo.JPG" height="167" style="float:right" title="La famille Neyron"></div>
                                 <div style="clear:both"></div>
@@ -392,11 +382,7 @@
 
                         <div id="first-par-wrap">
                             <div class="four columns left-aboutus-column"><img src="images/boeuf.jpg" height="167" style="float:left" title="Un Boeuf Bourguignon"></div>
-                            <div class="four columns right-aboutus-column">
-                                La découverte de notre belle région passe aussi par notre assiette.<br />
-                                Nous serons heureux de partager ce moment convivial (sur réservation) avec vous autour d'une grande
-                                table, de repas bourguignons avec des produits du jardin et des
-                                ingredients du terroir et de proximité.
+                            <div class="four columns right-aboutus-column"><p class="text">{{table-presentation-index}}</p>
                             </div>
                             <div style="clear:both"></div>
                         </div>
@@ -428,7 +414,7 @@
                         </p>
                     </div>
                     <div class="testimonials-content-wrap">
-                        <div class="testimonials-content"><span class="icon-quote-right"></span>En construction </div>
+                        <div class="testimonials-content"><span class="icon-quote-right"></span><p class="text">{{under-construction}}</p></div>
                         <div class="testimonials-author-wrap">
                             <img src="images/avatar65x65.png" class="testimonials-image">
                             <div class="author-info-wrap">

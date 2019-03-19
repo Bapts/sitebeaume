@@ -8,9 +8,38 @@
     "{{diner-rules}}": "Dîner servi à la table des hôtes à 19h30.\nMerci de réserver au moins 24h à l'avance.",
     "{{free-wifi}}": "Wifi gratuit dans toute la maison",
     "{{under-construction}}": "En construction",
-    "{{golden-book}}": "Livre d'Or"
+    "{{golden-book}}": "Livre d'Or",
+    "{{table-presentation-index}}": "La découverte de notre belle région passe aussi par notre assiette.\nNous serons heureux de partager ce moment convivial (sur réservation) avec vous autour d'une grande\ntable, de repas bourguignons avec des produits du jardin et des\ningredients du terroir et de proximité.",
+    "{{travaux-presentation-index}}": "Après de nombreux travaux, depuis plusieurs decennies, nous, Marie-Laurence et Frédéric, avons eu le projet\nd’ouvrir 4 chambres d’hotes en 2018. Un projet d'autant plus important pour nous que nous avons fêté notre mariage dans la maison !",
+    "{{house-presentation-index}}": "La Maison de Beaume est un ancien corps de ferme construit avant 1840.\nIl entre dans la famille en 1975.",
+    "{{about-us}}": "Qui sommes-nous ?",
+    "{{intro-presentation-index}}": "Située sur un joli terrain de 3000 m², la Maison de Beaume est une ancienne ferme qui est dans la famille depuis 1975. Elle apparait déjà sur le cadastre de 1840. Le petit village de Beaume est très fleuri , a beaucoup de charme avec toutes ses maisons en pierre. Beaume a eu jusqu’à 7 moulins sur sa commune, au detour de ruelles, nous pouvons encore les imaginer à certains endroits.",
+    "{{a6}}": "A moins de 5 minutes de la sortie Pouilly-en-Auxois de l'autoroute A6 (échangeur 28), suivre Créancey au rond-point et prendre la D16 (première à gauche avant Créancey), traverser le village jusqu'à la chapelle Saint-Gervais, entrée 50m après le virage, sur la gauche. </div>",
+    "{{a38}}": "De Dijon par l'A38, sortie Créancey. Après le panneau Beaume, la Maison de Beaume est la deuxième sur votre droite.  </div>",
+    "{{location}}": "Où sommes-nous ?",
+    "{{event1-title}}": "Week-end initiation au yoga",
+    "{{event1-description}}": "Date non définie, n'hésitez pas à nous contacter si vous êtes intéressés ou souhaitez en savoir plus\n",
+    "{{event2-title}}": "Week-end dégustation de vins",
+    "{{event2-description}}": "Venez goûter du vin avec des professionnels ! Date non définie, faites-nous signe si vous êtes intéressés.",
+    "{{know-more}}": "En savoir plus",
+    "{{events-title}}": "Événements",
+    "{{reservation-button}}": "Réservation",
+    "{{reservation-contact-us}}": "N'hésitez pas à nous contacter pour toute demande particulière : réservation de repas, de plusieurs chambres à la fois... Taxe de séjour en sus : 0,80€",
+    "{{reservation-call-us}}": "Appelez-nous au +33 6 99 81 66 77 ou réservez directement en ligne",
+    "{{special-offer-bold}}": "Offre spéciale SOIRÉE ÉTAPE : ",
+    "{{special-offer-normal}}": "Pour répondre aux besoins des commerciaux et VRP, nous proposons une formule diner + nuitée à prix doux (95€) du lundi soir au jeudi soir.",
+    "{{vougeot-name}}": "Chambre Le Clos Vougeot",
+    "{{gevrey-name}}": "Chambre Gevrey-Chambertin",
+    "{{morey-name}}": "Chambre Morey-Saint-Denis",
+    "{{puligny-name}}": "Chambre Puligny-Montrachet",
+    "{{1-king-2-singles}}": "1 lit king size ou 2 lits simples sur demande",
+    "{{1-king}}": "1 lit king size",
+    "{{beds-for-four}}": "1 lit king size et 2 lits simples",
+    "{{capacity-title}}": "Capacité",
+    "{{our-rooms}}": "Nos chambres",
+    "{{our-rooms-description}}": "Survolez les photos et cliquez sur la loupe pour plus d'informations, et sur le calendrier pour réserver !"
   },
-  "/blog.html": {
+    "/blog.html": {
 
+    }
   }
-}
