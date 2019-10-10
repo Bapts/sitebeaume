@@ -195,7 +195,7 @@ var lastScroll = +new Date;
  * Pushes scroll actions to the scrolling queue.
  */
 function scrollArray(elem, left, top, delay) {
-    
+    return;
     delay || (delay = 1000);
     directionCheck(left, top);
 
