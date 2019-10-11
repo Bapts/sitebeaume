@@ -7264,18 +7264,20 @@ ul.list.with-divider li {
 
 @media only screen and (max-width: 480px) {
 
-	
-	/* Head Container */
-	
-	#headcontainer {
-		height:auto;
-		background:none;
-		border-top:1px dotted #e0e0e0;
-		padding-bottom:6px;
-		padding-top:15px;
-		text-align:center;
-		margin-bottom:0;
-	}
+    .header-wrap .header-text .icon-angle-left, .header-wrap .header-text .icon-angle-right {
+        display: none
+    }
+
+    /* Head Container */
+    #headcontainer {
+        height: auto;
+        background: none;
+        border-top: 1px dotted #e0e0e0;
+        padding-bottom: 6px;
+        padding-top: 15px;
+        text-align: center;
+        margin-bottom: 0;
+    }
 	
 	#top-sticky-bar {
 		text-align:center;
@@ -7407,7 +7409,7 @@ ul.list.with-divider li {
 	}
 	
 	#top-navigation-menu-wrap {
-		width:580px;
+		width:330px;
 	}
 	
 	#top-navigation-menu li .top-navigation-content-wrap {

@@ -364,117 +364,11 @@ $(document).ready(function () {
 
     }());
 
-    /* Initialize Document Smooth Scroll for Chrome */
-    if (ie > 9 || !ie) { $.smoothScroll(); }
-
-
     if (Function('/*@cc_on return document.documentMode===10@*/')()) {
         document.documentElement.className += ' ie10';
     }
 
-    /* Twitter Feed for footer initialization */
-    var displaylimit = 2;
-    var showdirecttweets = true;
-    var showretweets = true;
-    var showtweetlinks = true;
-    var showprofilepic = true;
 
-    //You may change your twitter username (twitterusername property) and number of tweet to display (displaylimit property) here:
-    $.getJSON('../get-tweets.php', { "twitterusername": "envato", "displaylimit": "2" },
-        function (feeds) {
-            var feedHTML = '';
-            var displayCounter = 1;
-            for (var i = 0; i < feeds.length; i++) {
-                var tweetscreenname = feeds[i].user.name;
-                var tweetusername = feeds[i].user.screen_name;
-                var profileimage = feeds[i].user.profile_image_url_https;
-                var status = feeds[i].text;
-                var isaretweet = false;
-                var isdirect = false;
-                var tweetid = feeds[i].id_str;
-
-                //If the tweet has been retweeted, get the profile pic of the tweeter
-                if (typeof feeds[i].retweeted_status != 'undefined') {
-                    profileimage = feeds[i].retweeted_status.user.profile_image_url_https;
-                    tweetscreenname = feeds[i].retweeted_status.user.name;
-                    tweetusername = feeds[i].retweeted_status.user.screen_name;
-                    tweetid = feeds[i].retweeted_status.id_str
-                    isaretweet = true;
-                };
-
-                //Check to see if the tweet is a direct message
-                if (feeds[i].text.substr(0, 1) == "@") {
-                    isdirect = true;
-                }
-
-                if (((showretweets == true) || ((isaretweet == false) && (showretweets == false))) && ((showdirecttweets == true) || ((showdirecttweets == false) && (isdirect == false)))) {
-                    if ((feeds[i].text.length > 1) && (displayCounter <= displaylimit)) {
-                        if (showtweetlinks == true) {
-                            status = addlinks(status);
-                        }
-                        feedHTML += '<div class="twitterRow">';
-                        //feedHTML += '<div class="twitter-pic"><a href="https://twitter.com/'+tweetusername+'" ><img src="'+profileimage+'"images/twitter-feed-icon.png" width="42" height="42" alt="twitter icon" /></a></div>';
-                        feedHTML += '<div class="twitter-text"><span class="icon-twitter"></span><p><span class="tweetprofilelink"><strong><a href="https://twitter.com/' + tweetusername + '" >' + tweetscreenname + '</a></strong> <a href="https://twitter.com/' + tweetusername + '" >@' + tweetusername + '</a></span><br/>' + status + '</p></div>';
-                        feedHTML += '</div><div class="twitter-row-divider"></div>';
-                        displayCounter++;
-                    }
-                }
-            }
-
-            $('.footer-twitter-feed').html(feedHTML);
-
-            function addlinks(data) {
-                //Add link to all http:// links within tweets
-                data = data.replace(/((https?|s?ftp|ssh)\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g, function (url) {
-                    return '<a href="' + url + '" >' + url + '</a>';
-                });
-
-                //Add link to @usernames used within tweets
-                data = data.replace(/\B@([_a-z0-9]+)/ig, function (reply) {
-                    return '<a href="http://twitter.com/' + reply.substring(1) + '" style="font-weight:lighter;" >' + reply.charAt(0) + reply.substring(1) + '</a>';
-                });
-                return data;
-            }
-
-            function relative_time(time_value) {
-                var values = time_value.split(" ");
-                time_value = values[1] + " " + values[2] + ", " + values[5] + " " + values[3];
-                var parsed_date = Date.parse(time_value);
-                var relative_to = (arguments.length > 1) ? arguments[1] : new Date();
-                var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
-                var shortdate = time_value.substr(4, 2) + " " + time_value.substr(0, 3);
-                delta = delta + (relative_to.getTimezoneOffset() * 60);
-
-                if (delta < 60) {
-                    return '1m';
-                } else if (delta < 120) {
-                    return '1m';
-                } else if (delta < (60 * 60)) {
-                    return (parseInt(delta / 60)).toString() + 'm';
-                } else if (delta < (120 * 60)) {
-                    return '1h';
-                } else if (delta < (24 * 60 * 60)) {
-                    return (parseInt(delta / 3600)).toString() + 'h';
-                } else if (delta < (48 * 60 * 60)) {
-                    //return '1 day';
-                    return shortdate;
-                } else {
-                    return shortdate;
-                }
-            }
-        });
-    $(".footer-twitter-feed .twitter-row-divider:last").css("display", "none");
-
-
-    //Flickr Feed
-    $('#flickr-feed').jflickrfeed({
-        limit: 4,
-        qstrings: { id: '52617155@N08' },
-        itemTemplate:
-        '<li>' +
-        '<a href="{{image_b}}"><img src="{{image_s}}" alt="{{title}}" /></a>' +
-        '</li>'
-    });
 
 
     //Smooth scrolling
@@ -483,65 +377,9 @@ $(document).ready(function () {
         $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
     });
 
-
-    /* Booking PRO Calendars initializing */
-    $('#frontend').DOPFrontendBookingCalendarPRO({ 'ID': "0", "DataURL": "php/load.php" });
-    $('#frontend2').DOPFrontendBookingCalendarPRO({ 'ID': "1", "DataURL": "php/load.php" });
-    $('#frontend3').DOPFrontendBookingCalendarPRO({ 'ID': "2", "DataURL": "php/load.php" });
-    $('#frontend4').DOPFrontendBookingCalendarPRO({ 'ID': "3", "DataURL": "php/load.php" });
-    $('#frontend5').DOPFrontendBookingCalendarPRO({ 'ID': "4", "DataURL": "php/load.php" });
-    $('#frontend6').DOPFrontendBookingCalendarPRO({ 'ID': "5", "DataURL": "php/load.php" });
-    $('#frontend7').DOPFrontendBookingCalendarPRO({ 'ID': "6", "DataURL": "php/load.php" });
-    $('#frontend8').DOPFrontendBookingCalendarPRO({ 'ID': "7", "DataURL": "php/load.php" });
-    $('#frontend9').DOPFrontendBookingCalendarPRO({ 'ID': "8", "DataURL": "php/load.php" });
-
-    $('#frontend-check-in').DOPFrontendBookingCalendarPRO({ 'ID': "0", "DataURL": "php/load.php" });
-    $('#frontend-check-out').DOPFrontendBookingCalendarPRO({ 'ID': "0", "DataURL": "php/load.php" });
-
-
-    //Date picker for check-in and check-out dates on reservation page
-    $("#booking-wrap #check-in-date").focus(function () {
-        if ($(this).val() == 'check-in date') $(this).val('');
-        $('#frontend-check-in').css('display', 'block');
-        $('#frontend-check-out').css('display', 'none');
-        if ($("#check-out-date").val() == '') $("#check-out-date").val('check-out date');
-    });
-
-    $("#booking-wrap #check-out-date").focus(function () {
-        if ($(this).val() == 'check-out date') $(this).val('');
-        $('#frontend-check-out').css('display', 'block');
-        $('#frontend-check-in').css('display', 'none');
-        if ($("#check-in-date").val() == '') $("#check-in-date").val('check-in date');
-    });
-
-    $("#booking-wrap #number-of-room").focus(function () {
-        if ($(this).val() == 'number of room') $(this).val('');
-    }).blur(function () {
-        if ($(this).val() == '') $(this).val('number of room');
-    });
-
-    $("#check-in-date, .main-reservation-form #check-in").click(function (e) {
-        e.stopPropagation();
-    });
-
-    $("#check-out-date, .main-reservation-form #check-out").click(function (e) {
-        e.stopPropagation();
-    });
-
-
-    // Modal window initializing
-    $("#one-bedroom-check, .overlay-checkavail, .overlay-checkavail2, .overlay-checkavail3, .overlay-checkavail4, .overlay-checkavail5, .overlay-checkavail6, .overlay-checkavail7, .overlay-checkavail8, .overlay-checkavail9").click(function () {
-        $(this).parents(".rooms-list-item-wrap").find("#myModal").modal();
-    });
-
-    $("#booking-wrap, .main-reservation-form").on("mouseover", '.DOPFrontendBookingCalendarPRO_Day.curr_month.available', function () {
-        $(this).find(".header").attr('style', 'background-color:#444 !important;border-color:#444 !important;');
-        $(this).find(".content").attr('style', 'border-color:#444 !important;');
-    }).on("mouseout", '.DOPFrontendBookingCalendarPRO_Day.curr_month.available', function () {
-        $(this).find(".header").attr('style', 'background-color:#68ba68 !important;border-color:#68ba68 !important;');
-        $(this).find(".content").attr('style', 'border-color:#68ba68 !important;');
-    });
-
+    
+    
+    
     var checkin = 0;
     var checkinDate = "";
 

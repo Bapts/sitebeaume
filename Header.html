@@ -9,20 +9,14 @@
                     <div id="top-phone"><span class="icon-mobile-phone"></span>06.99.81.66.77</div>
                     <div id="top-email"><span class="icon-envelope-alt"></span>contact@lamaisondebeaume.com</div>
                     <!-- END TOP CONTACT INFO -->
-                    <div id="top-search">
-                        <span class="icon-search"></span>
-                        <div id="top-search-window-wrap"><input type="text" value="rechercher.." /></div>
-                    </div>
                     <!-- BEGIN TOP LANGUAGES SELECT -->
                     <div id="top-language-select">
                         <ul class="dropdown">
                             <li>
                                 <a href="#" id="lang-contry-tag"><img src="images/gf.png" class="country-flag"> Français <span class="icon-angle-down"></span></a>
                                 <ul class="sub_menu">
+                                    <li><a href="index.html"><img src="images/gf.png" class="country-flag"> Français</a></li>
                                     <li><a href="index-EN.html"><img src="images/gb.png" class="country-flag"> English</a></li>
-                                    <li><a href="index-ES.html?lang=es-ES"><img src="images/es.png" class="country-flag"> Espanol</a></li>
-                                    <li><a href="index-DE.html?lang=de-DE"><img src="images/de.png" class="country-flag"> Deutsch</a></li>
-                                    <li><a href="index-FR.html?lang=fr-FR"><img src="images/gf.png" class="country-flag"> Français</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -35,12 +29,7 @@
     <!-- END TOP INFO BAR -->
     <!-- BEGIN LOGO AND NAVIGATION WRAP -->
     <div id="logocontainer" class="container">
-        <div id="top-logo-menu-wrap" class="sixteen columns clearfix">
-            <!--<div class="two columns" id="top-logo-wrap">
 
-            <a href="index.html"><img src="images/logo-test.PNG" alt="La Maison de Beaume logo" id="main-logo" /><img src="images/logo-test.PNG" alt="La maison de Beaume" id="main-logo-min" /></a>
-
-        </div>//-->
 
         <div class="fourteen columns" id="top-navigation-menu-wrap">
 
@@ -61,7 +50,7 @@
             <!-- END MAIN MOBILE NAVIGATION -->
             <!-- BEGIN MAIN NAVIGATION -->
             <ul id="top-navigation-menu" class="dropdown">
-                <li><a href="index-FR.html"><div class="top-navigation-content-wrap">Accueil <span class="under-title">menu principal</span></div></a></li>
+                <li><a href="index.html?lang=fr-FR"><div class="top-navigation-content-wrap">Accueil <span class="under-title">menu principal</span></div></a></li>
                 <li><a href="les-chambres.html"><div class="top-navigation-content-wrap">Les chambres <span class="under-title">Réserver en ligne</span></div></a></li>
                 <li><a href="table.html"><div class="top-navigation-content-wrap">Table d'hôtes<span class="under-title"></span></div></a></li>
                 <li><a href="blog.html"><div class="top-navigation-content-wrap">Blog<span class="under-title"></span></div></a></li>
@@ -89,20 +78,22 @@
 
 <!-- NATION THEME MAIN SCRIPTS -->
 <script src="js/allscript.js"></script>
-<script>
+<script type="text/javascript">
     $(document).ready(function () {
-            var userLang = GetURLParameter('lang') || navigator.language || navigator.userLanguage;
-        
-            if (userLang === 'fr-FR')
-                $('#lang-contry-tag').html('<a href="#" id="lang-contry-tag"><img src="images/gf.png" class="country-flag"> Français <span class="icon-angle-down"></span></a>')
-            if (userLang === 'es-ES')
-                $('#lang-contry-tag').html('<a href="#" id="lang-contry-tag"><img src="images/es.png" class="country-flag"> Espanol <span class="icon-angle-down"></span></a>')
-            if (userLang === 'it-IT')
-                $('#lang-contry-tag').html('<a href="#" id="lang-contry-tag"><img src="images/it.png" class="country-flag"> Italiano <span class="icon-angle-down"></span></a>')
-            if (userLang === 'de-DE')
-                $('#lang-contry-tag').html('<a href="#" id="lang-contry-tag"><img src="images/de.png" class="country-flag"> Deutch <span class="icon-angle-down"></span></a>')
-            if (userLang === 'en-US')
-                $('#lang-contry-tag').html('<a href="#" id="lang-contry-tag"><img src="images/gb.png" class="country-flag"> English <span class="icon-angle-down"></span></a>')
+        var userLang = GetURLParameter('lang');
+
+        if (userLang === 'fr-FR')
+            $('#lang-contry-tag').html('<a href="#" id="lang-contry-tag"><img src="images/gf.png" class="country-flag"> Français <span class="icon-angle-down"></span></a>')
+        if (userLang === 'en-US' || location.pathname.indexOf("-EN") > 0)
+            $('#lang-contry-tag').html('<a href="#" id="lang-contry-tag"><img src="images/gb.png" class="country-flag"> English <span class="icon-angle-down"></span></a>')
+
+
+        $('.icon-reorder').click(function () {
+            if ($("#mobile-navigation-menu-list").css("display") == "none")
+                $('#mobile-navigation-menu-list').hide();
+            else
+                $('#mobile-navigation-menu-list').show();
         });
+    });
 </script>
 
