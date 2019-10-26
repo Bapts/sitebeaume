@@ -3,7 +3,7 @@
 <!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html class="">
- <!--<![endif]-->
+<!--<![endif]-->
 <head>
     <title>La Maison de Beaume - Chambre et table d'hôtes bourguignonne</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,6 @@
 
     <!-- GOOGLE MAPS API -->
     <!--<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=your_gmaps_api_key_here&sensor=false"></script>-->
-
     <!-- TOMTOM MAPS API -->
     <script src="tomtom_sdk/tomtom.min.js"></script>
     <link rel='stylesheet' type='text/css' href='tomtom_sdk/map.css' />
@@ -41,7 +40,7 @@
         <!-- BEGIN CONTACT PAGE GOOGLE MAPS -->
         <div class="container" style="margin-bottom:25px;">
             <div id="map" style='height:500px;'></div>
-            <script> 
+            <script>
                 var laMaisonDeBeaume = [47.2608810, 4.5799931];
                 var map = tomtom.L.map('map', {
                     key: "WUtOfFrKu6yIkkZAuSFBqMhQh2Vvqlvq",
@@ -55,56 +54,10 @@
                 marker.bindPopup("<b>La Maison de Beaume</b><br/>51 rue Saint Leger, Beaume Commune de Créancey");
             </script>
         </div>
-        <!-- END CONTACT PAGE GOOGLE MAPS -->
-        <!-- BEGIN CONTACT PAGE CONTENT -->
-        <div class="container">
-            <div class="eleven columns contact-page" id="is-contact-page">
-                <h3>Envoyez nous un Email</h3>
-                <div id="contact-form-intro">Vous avez une question n'hésitez-pas à nous la poser par email.</div>
-                <div class="done">
-                    <b>Merci !</b> Nous avez reçu votre message, nous y repondrons le plus rapidement possible.
-                </div>
+        <div class="container reservation-page-wrap">
 
-                <!-- BEGIN CONTACT PAGE SEND MESSAGE FORM -->
-                <form>
-                    <input type="text" id="name-comments-field" value="Nom">
-                    <input type="text" id="email-comments-field" value="Email">
-                    <input type="text" id="phone-comments-field" value="Téléphone">
-                    <div style="clear:both"></div>
-                    <textarea id="text-comments-field">Ecrivez le message ici...</textarea>
-                    <button type="submit" id="submit-button">Envoyer<span class="icon-envelope"></span></button>
-                </form>
-                <!-- END CONTACT PAGE SEND MESSAGE FORM -->
+            <iframe src="http://lamaisondebeaume.com/wordpress/index.php/contact/" style="width:100%; height: 680px;"></iframe>
 
-            </div>
-
-            <!-- BEGIN CONTACT PAGE SIDEBAR -->
-            <div class="four columns offset-by-one contact-sidebar">
-                <!-- BEGIN SIDEBAR CONTACT INFO -->
-                <div class="sidebar-header">Contact</div>
-                <div id="contact-us-wrap">
-                    <div id="contact-us-wrap-intro">Vous avez une question ou vous avez un problème avec la réservation en ligne? Contactez nous à l'aide du formulaire ci-contre ou des informations ci-dessous.</div>
-                    <ul>
-                        <li id="by-phone">
-                            <span class="icon-mobile-phone"></span>
-                            <div class="contact-info-content"><div class="contact-info-method-name">téléphone:</div> <br />+33 6 99 81 66 77</div>
-                            <div style="clear:both"></div>
-                        </li>
-                        <li id="by-email">
-                            <span class="icon-envelope-alt"></span>
-                            <div class="contact-info-content"><div class="contact-info-method-name">email:</div> <br />contact@lamaisondebeaume.com</div>
-                            <div style="clear:both"></div>
-                        </li>
-                        <!--<li id="by-skype">
-                            <span class="icon-skype"></span>
-                            <div class="contact-info-content"><div class="contact-info-method-name">skype:</div> <br />hotelnationskype</div>
-                            <div style="clear:both"></div>
-                        </li>-->
-                    </ul>
-                </div>
-                <!-- END SIDEBAR CONTACT INFO -->
-
-            </div>
         </div>
         <!-- END CONTACT PAGE CONTENT -->
         <!-- BEGIN FOOTER -->
